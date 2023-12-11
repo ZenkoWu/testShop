@@ -1,8 +1,11 @@
-import { cartActionTypes } from "./actionTypes";
-import { TPayload } from "./cartReducer";
+import { TCatalogPayload, TListItem } from "../types";
+import { cartActionTypes, catalogActionTypes } from "./actionTypes";
 
 export const cart = {
-    increment: (payload: TPayload) => ({type: cartActionTypes.INCREMENT, payload}),
-    decrement: (payload: TPayload) => ({type: cartActionTypes.DECREMENT, payload}),
-    deleteTickets: (payload: TPayload) => ({type: cartActionTypes.DELETE_TICKETS, payload}),
+    add: (payload: TListItem) => ({type: cartActionTypes.ADD_ITEM, payload})
 }
+
+export const catalog = {
+    setList: (payload: TCatalogPayload)=> ({ type: catalogActionTypes.SET_LIST, payload})
+}
+
