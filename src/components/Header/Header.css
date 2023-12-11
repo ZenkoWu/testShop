@@ -44,11 +44,12 @@
 .cart-item {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
     color: white;
 }
 
-.cart-item__link{
+.cart-item__link {
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -58,7 +59,7 @@
 .cart-item__link__items-count {
   padding: 0;  
   margin: 0;
-  font-size: 18px;
+  font-size: 22px;
 }
 
 @media(max-width: 576px) {
