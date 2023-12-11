@@ -1,5 +1,6 @@
 export const cartActionTypes = {
-    ADD_ITEM: 'ADD-ITEM'
+    ADD_ITEM: 'ADD-ITEM',
+    DELETE_ITEM: 'DELETE-ITEM'
 }
 
 export const catalogActionTypes = {

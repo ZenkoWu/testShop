@@ -12,7 +12,7 @@ export const cartReducer = (
         payload, 
         type
     }: {
-        payload: TListItem, 
+        payload: TListItem | TListItem['id'], 
         type: keyof typeof cartActionTypes
     }
 ) => {
@@ -24,6 +24,14 @@ export const cartReducer = (
                 itemsCount: state.itemsCount + 1
             }
         }
+        case  cartActionTypes.DELETE_ITEM: {
+            return {
+                ...state,
+                items: state.items.filter(el => el.id !== payload),
+                itemsCount: state.itemsCount - 1
+            }
+        }
+
         default: return state;
     }
 } 
