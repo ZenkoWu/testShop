@@ -1,5 +1,7 @@
 export const cartActionTypes = {
-    INCREMENT: 'INCREMENT',
-    DECREMENT: 'DECREMENT',
-    DELETE_TICKETS: ' DELETE_TICKETS'
+    ADD_ITEM: 'ADD-ITEM'
+}
+
+export const catalogActionTypes = {
+    SET_LIST: 'SET-LIST'
 }
