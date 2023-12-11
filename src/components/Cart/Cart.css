@@ -1,5 +1,9 @@
 .cart-container { 
     padding: 20px; 
+    height: 91vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .empty-cart {
@@ -31,15 +35,13 @@
     font-size: 20px;
     border-radius: 8px;
     padding: 17px;
-    margin-top: auto;
 }
 
 .cart-list {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     gap: 20px;
-    padding-top: 20px;
+    padding-bottom: 20px;
 }
 .card {
     background-color: white;

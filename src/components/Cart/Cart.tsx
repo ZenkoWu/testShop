@@ -19,11 +19,7 @@ export const Cart = () => {
         <div className="cart-container">
             { 
                 itemsCount > 0 ?
-                    <div>
-                        <div className='result-sum'>
-                            <p>Итого:</p>
-                            <div>{sum} ₽</div>
-                        </div>
+                    <>
                         <div className="cart-list">
                             {
                                 items.map((el) => 
@@ -52,7 +48,12 @@ export const Cart = () => {
                                 ) 
                             }
                         </div>
-                    </div>
+                        
+                        <div className='result-sum'>
+                            <p>Итого:</p>
+                            <div>{sum} ₽</div>
+                        </div>
+                    </>
                 : 
                 <div className="empty-cart">
                     <img 
