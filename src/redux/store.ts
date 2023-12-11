@@ -1,15 +1,16 @@
 import { applyMiddleware, combineReducers, createStore  } from "redux";
-import { cartReducer } from "./cartReducer";
-
-export type TState = {
-    cart: {
-        ticketsCount: number,
-        tickets: {[key: string]: number}
-    }
-}
+import { cartReducer } from "./reducers/cartReducer";
+import { catalogReducer } from "./reducers/catalogReducer";
+import {thunk} from "redux-thunk"
 
 const reducers = combineReducers({
-    cart: cartReducer
+    cart: cartReducer,
+    catalog: catalogReducer
 
 })
-export const store = createStore(reducers)
+const loggerMiddleware = (store: any) => (next: any) => (action: any) => {
+    console.log("action", action);
+    next(action);
+  };
+const middleware = applyMiddleware(thunk, loggerMiddleware);
+export const store = createStore(reducers, {}, middleware)
