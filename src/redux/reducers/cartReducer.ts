@@ -2,8 +2,8 @@ import { TListItem, TState } from "../../types";
 import { cartActionTypes } from "../actionTypes";
 
 const initialState = {
-    items: [],
-    itemsCount: 0
+    items: JSON.parse(localStorage.getItem('cartItems') || '[]'),
+    itemsCount: JSON.parse(localStorage.getItem('cartItemsCount') || '0')
 }
 
 export const cartReducer = (
@@ -18,17 +18,30 @@ export const cartReducer = (
 ) => {
     switch(type) {
         case  cartActionTypes.ADD_ITEM: {
+            
+            const items = [...state.items, payload]
+            const itemsCount = state.itemsCount + 1
+
+            localStorage.setItem('cartItems', JSON.stringify(items))
+            localStorage.setItem('cartItemsCount', JSON.stringify(itemsCount))
+
             return {
                 ...state,
-                items: [...state.items, payload],
-                itemsCount: state.itemsCount + 1
+                items,
+                itemsCount
             }
         }
         case  cartActionTypes.DELETE_ITEM: {
+            const items  = state.items.filter((el: any) => el.id !== payload)
+            const itemsCount = state.itemsCount - 1
+            
+            localStorage.setItem('cartItems', JSON.stringify(items))
+            localStorage.setItem('cartItemsCount', JSON.stringify(itemsCount))
+
             return {
                 ...state,
-                items: state.items.filter(el => el.id !== payload),
-                itemsCount: state.itemsCount - 1
+                items,
+                itemsCount
             }
         }
 
