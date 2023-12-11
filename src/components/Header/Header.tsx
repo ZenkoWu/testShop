@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import cart from '../../images/cart.svg'
 import { useSelector } from 'react-redux'
-import { TState } from '../../redux/store'
+import { TState } from '../../types'
 import './Header.css'
 
 export const Header = () => {
