@@ -1,0 +1,8 @@
+.preloader {
+    text-align: center;
+    margin: 38vh auto;
+}
+
+.preloader__img {
+    width: 20vh;
+}
