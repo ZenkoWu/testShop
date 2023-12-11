@@ -1,9 +1,5 @@
 .cart-container { 
     padding: 20px; 
-    height: 91vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .empty-cart {
@@ -71,6 +67,7 @@
 }
 
 .card-delete-btn {
+    cursor: pointer;
     border: 0;
     background-color: orange;
     padding: 10px;
