@@ -16,5 +16,4 @@ export type TState = {
     }
 }
 
-export type TCatalogPayload =  TState["catalog"]["list"]
-export type TCartPayload = number
+export type TCatalogPayload = TState["catalog"]["list"]
