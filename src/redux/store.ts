@@ -8,9 +8,6 @@ const reducers = combineReducers({
     catalog: catalogReducer
 
 })
-const loggerMiddleware = (store: any) => (next: any) => (action: any) => {
-    console.log("action", action);
-    next(action);
-  };
-const middleware = applyMiddleware(thunk, loggerMiddleware);
+
+const middleware = applyMiddleware(thunk);
 export const store = createStore(reducers, {}, middleware)
