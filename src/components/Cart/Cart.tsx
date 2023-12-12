@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
-import './Cart.css'
+import "./Cart.css"
 import { TListItem, TState } from "../../types";
-import emptyCart from '../../images/emptyCart.svg'
+import emptyCart from "../../images/emptyCart.svg"
 import { cart } from "../../redux/actionCreators";
 import { useMemo } from "react";
 
@@ -14,7 +14,7 @@ export const Cart = () => {
         [items]
     )
     
-    const deleteItem = (id: TListItem['id']) => dispatch(cart.delete(id))
+    const deleteItem = (id: TListItem["id"]) => dispatch(cart.delete(id))
     return (
         <div className="cart-container">
             { 
@@ -49,7 +49,7 @@ export const Cart = () => {
                             }
                         </div>
                         
-                        <div className='result-sum'>
+                        <div className="result-sum">
                             <p>Итого:</p>
                             <div>{sum} ₽</div>
                         </div>
