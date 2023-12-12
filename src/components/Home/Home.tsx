@@ -1,11 +1,11 @@
-import home from "../../images/home.svg"
+import groceryPackage from "../../images/groceryPackage.svg"
 import "./Home.css"
 
 export const Home = () => {
     return (
         <div className="home-page">
             <img 
-                src={home} 
+                src={groceryPackage} 
                 alt="groceryPackage"
                 className="home-page__img"
             />
