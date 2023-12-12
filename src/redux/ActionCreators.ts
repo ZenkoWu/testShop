@@ -3,7 +3,7 @@ import { cartActionTypes, catalogActionTypes } from "./actionTypes";
 
 export const cart = {
     add: (payload: TListItem) => ({type: cartActionTypes.ADD_ITEM, payload}),
-    delete: (payload: TListItem['id']) => ({type: cartActionTypes.DELETE_ITEM, payload})
+    delete: (payload: TListItem["id"]) => ({type: cartActionTypes.DELETE_ITEM, payload})
 }
 
 export const catalog = {
