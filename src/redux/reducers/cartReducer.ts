@@ -32,7 +32,7 @@ export const cartReducer = (
             }
         }
         case  cartActionTypes.DELETE_ITEM: {
-            const items  = state.items.filter((el: any) => el.id !== payload)
+            const items = state.items.filter((el: TListItem) => el.id !== payload)
             const itemsCount = state.itemsCount - 1
             
             localStorage.setItem('cartItems', JSON.stringify(items))
