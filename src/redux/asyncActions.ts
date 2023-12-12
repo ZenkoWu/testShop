@@ -5,10 +5,14 @@ import { catalog } from "./actionCreators";
 
 type TDispatch = (action: {type: string, payload: TListItem[]}) => void;
 
+type TResponse = {
+    data: {
+        items: TListItem[]
+    }
+}
 export const setList = () => {
     return (dispatch: TDispatch) => {
-        axios.get(`${BASE_URL}${API_ROUTES.CATALOG}`).then((response: any)=> {
-            console.log(response)
+        axios.get(`${BASE_URL}${API_ROUTES.CATALOG}`).then((response: TResponse)=> {
             dispatch(catalog.setList(response.data.items));
         });
     }
