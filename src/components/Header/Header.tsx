@@ -8,17 +8,19 @@ export const Header = () => {
     const {itemsCount} = useSelector((state: TState) => state.cart)
     return (
         <header className='header header_sticky'>
-            <div className='nav-menu-and-logo-container'>
-                <h1 className='shop-logo'>Батарейка Shop</h1>
-
-                <div className='nav-menu'> 
-                    <NavLink 
-                        to='/catalog' 
-                        className='nav-menu__link'
-                    >
-                        Каталог
-                    </NavLink>
-                </div>
+            <div className='nav-menu'> 
+                <NavLink  
+                    to='/' 
+                    className='shop-logo'
+                >
+                    Батарейка Shop
+                </NavLink>
+                <NavLink 
+                    to='/catalog' 
+                    className='nav-menu__link'
+                >
+                    Каталог
+                </NavLink>
             </div>
             
             <div className='cart-item'> 
